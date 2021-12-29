@@ -1,0 +1,8 @@
+.rsscomponent_button {
+  background-color: #4a4ad3;
+  transition: all 0.1s ease-in-out;
+  color: white;
+}
+.rsscomponent_button:hover {
+  background-color: #3b3bac;
+}/*# sourceMappingURL=index.css.map */

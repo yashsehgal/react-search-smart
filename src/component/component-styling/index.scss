@@ -1,0 +1,8 @@
+.rsscomponent_button {
+    background-color: rgb(74, 74, 211);
+    transition: all 0.1s ease-in-out;
+    color: white;
+    &:hover {
+        background-color: rgb(59, 59, 172);
+    }
+}
