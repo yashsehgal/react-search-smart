@@ -4,6 +4,8 @@ import ReactModal from "react-modal";
 // stylings
 import './component-styling/index.css';
 
+ReactModal.setAppElement('#root');
+
 export default function ReactSearchSmart(componentProperties) {
     const [searchModalRef, setSearchModal] = useState(false);
     const [inputPlaceholder] = useState(
@@ -36,10 +38,11 @@ export default function ReactSearchSmart(componentProperties) {
                         fontFamily: 'inherit',
                         display: 'flex',
                         alignItems: 'center',
-                        justifyContent: 'center'
+                        justifyContent: 'center',
+                        backgroundColor: 'rgba(0, 0, 0, 0.125)'
                     },
                     content: { 
-                        fontFamily: 'inherit',
+                        fontFamily: 'Inter, sans-serif',
                         width: '56%',
                         marginRight: 'auto',
                         marginLeft: 'auto',
@@ -50,32 +53,56 @@ export default function ReactSearchSmart(componentProperties) {
                     }
                 }}
             >
-
-                <input type="text" placeholder={inputPlaceholder} className="rssc_componentInput" 
-                    onChange={(searchInput) => {
-                        let currentSearchInput = searchInput.target.value;
-                        setCurrentSearchInput(currentSearchInput);
-                    }}
-                />
-                
-                <div className="data-list-wrapper">
-                    <ul className="data-list">
-                        {dataListRef.filter(item => {
-                            if (item === '') {
-                                return item;
-                            } else if (item.username.toLowerCase().includes(currentSearchInputRef.toLowerCase())) {
-                                return item;
-                            }
-                        })
-                        
-                        .map((dataItem, index) => (
-                            <li className="data-item" key={index}>
-                                {dataItem.username}
-                            </li>
-                        ))}
-                    </ul>
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'auto',
+                    gap: '0.6em',
+                    alignItems: 'flex-start'
+                }}>
+                    <input type="text" placeholder={inputPlaceholder} className="rssc_componentInput" 
+                        onChange={(searchInput) => {
+                            let currentSearchInput = searchInput.target.value;
+                            setCurrentSearchInput(currentSearchInput);
+                        }}
+                    />
+                    
+                    <div className="data-list-wrapper" style={{ marginTop: '1em' }}>
+                        <ul className="data-list"
+                            style={{
+                                listStyle: 'none',
+                                margin: '0',
+                                padding: '0',
+                                width: '98%',
+                                display: 'grid',
+                                gridTemplateColumns: 'auto',
+                                gap: '0.6em',
+                                alignItems: 'flex-start'
+                            }}
+                        >
+                            {dataListRef.filter(item => {
+                                if (item === '') {
+                                    return item;
+                                } else if (item.username.toLowerCase().includes(currentSearchInputRef.toLowerCase())) {
+                                    return item;
+                                }
+                            })
+                            
+                            .map((dataItem, index) => (
+                                <li className="data-item" key={index}>
+                                    <div style={{ 
+                                        backgroundColor: '#f4f4f4', 
+                                        color: '#444444',
+                                        padding: '0.8em 0.4em',
+                                        width: '100%',
+                                        borderRadius: '8px'
+                                    }}>
+                                        {dataItem.username}
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
-
                 <div className="modal-action-buttons-wrapper_bottom"
                     style={{
                         position: 'absolute',
@@ -114,7 +141,7 @@ export default function ReactSearchSmart(componentProperties) {
                     }}
                     onClick={() => window.open('https://www.thedesignsystems.com/')}
                     >
-                        <p style={{ color: '#dddddd', fontSize: '12px' }}>Powered by</p>
+                        <p style={{ color: '#bbbbbb', fontSize: '12px' }}>Powered by</p>
                         <img src="https://www.github.com/DesignSystemsOSS.png" alt="tds-logo" 
                             style={{ width: '36px', borderRadius: '50%' }}
                         />

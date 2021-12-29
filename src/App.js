@@ -29,9 +29,9 @@ export default function App() {
           <FaSearch />
           <span>Search for users</span>
         </React.Fragment>
-      } 
-      dataList={usersData}
-      inputPlaceholder="Search for users"
+        } 
+        dataList={usersData}
+        inputPlaceholder="Search for users"
       />
     </div>
   )
