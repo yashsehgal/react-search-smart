@@ -1,8 +1,52 @@
 .rsscomponent_button {
   background-color: #4a4ad3;
+  border-radius: 4px;
   transition: all 0.1s ease-in-out;
   color: white;
 }
 .rsscomponent_button:hover {
   background-color: #3b3bac;
+}
+
+.rsscomponent_button_close {
+  background-color: white;
+  border-radius: 4px;
+  transition: all 0.1s ease-in-out;
+  color: #e43333;
+}
+.rsscomponent_button_close:hover {
+  background-color: #ececec;
+}
+
+.rssc_componentInput {
+  background-color: #eeeeee;
+  padding: 10px 12px;
+  color: black;
+  width: 96%;
+  border: 2px solid #d8d8d8;
+  border-radius: 6px;
+  font-family: inherit;
+  font-weight: 600;
+}
+.rssc_componentInput:focus {
+  outline: none;
+  border-color: #cfcfcf;
+}
+.rssc_componentInput::-moz-placeholder {
+  font-family: Inter, sans-serif;
+  color: #b2b2b2;
+  font-weight: 500;
+  font-size: 14px;
+}
+.rssc_componentInput:-ms-input-placeholder {
+  font-family: Inter, sans-serif;
+  color: #b2b2b2;
+  font-weight: 500;
+  font-size: 14px;
+}
+.rssc_componentInput::placeholder {
+  font-family: Inter, sans-serif;
+  color: #b2b2b2;
+  font-weight: 500;
+  font-size: 14px;
 }/*# sourceMappingURL=index.css.map */
