@@ -6,6 +6,9 @@
     &:hover {
         background-color: rgb(59, 59, 172);
     }
+    &:focus {
+        outline: none;
+    }
 }
 
 .rsscomponent_button_close {
@@ -15,6 +18,9 @@
     color: rgb(228, 51, 51);
     &:hover {
         background-color: rgb(236, 236, 236);
+    }
+    &:focus {
+        outline: none;
     }
 }
 

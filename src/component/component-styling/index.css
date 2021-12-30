@@ -7,6 +7,9 @@
 .rsscomponent_button:hover {
   background-color: #3b3bac;
 }
+.rsscomponent_button:focus {
+  outline: none;
+}
 
 .rsscomponent_button_close {
   background-color: white;
@@ -16,6 +19,9 @@
 }
 .rsscomponent_button_close:hover {
   background-color: #ececec;
+}
+.rsscomponent_button_close:focus {
+  outline: none;
 }
 
 .rssc_componentInput {
